@@ -1,5 +1,5 @@
 # 1. Introduction
-Summary of Anime Face Detection methods Based on Python.
+This repository is the summary of anime face detection methods based on Python.
 # 2. Test Sample
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042219445425.jpg#pic_center)
 # 3. Test Device
