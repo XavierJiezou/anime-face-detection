@@ -48,7 +48,7 @@ if __name__ == '__main__':
 - Module: `pip install pillow opencv-python animeface`
 
 ---
-Note: 如果`pip install animeface`报错，请下载已经编译好的[animeface-1.1.0-cp37-cp37m-manylinux1_x86_64.whl.whl](https://files.pythonhosted.org/packages/d0/d9/40e9fdff3f9fa9dac27e1d687fc1af72efe355d040e6def6519c21e5e10a/animeface-1.1.0-cp37-cp37m-manylinux1_x86_64.whl)文件，然后使用如下命令安装：（不过用这种方法安装，强制要求**Python**版本是**3.7**）
+Note: If `pip install animeface` reports an error, please download the compiled file [animeface-1.1.0-cp37-cp37m-manylinux1_x86_64.whl.whl](https://files.pythonhosted.org/packages/d0/d9/40e9fdff3f9fa9dac27e1d687fc1af72efe355d040e6def6519c21e5e10a/animeface-1.1.0-cp37-cp37m-manylinux1_x86_64.whl), and then use the following command to install: (It is mandatory that the **Python** version is **3.7**)
 ```bash
 pip install animeface-1.1.0-cp37-cp37m-manylinux1_x86_64.whl
 ```
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 - Module: `pip install opencv-python dlib`
 - Model: [hog_anime_face_detect.svm](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/model/hog_anime_face_detect.svm)
 ---
-注意：`dlib`库下载后还需要用`C++`编译器编译，因此你需要安装`Visual Studio`并配置`C++`编译环境，如果你已经安装并配置，那么请忽略；如果没有，请看[这篇](https://blog.csdn.net/qq_42951560/article/details/115949166)教程。
+Note：The `dlib` library needs to be compiled with the `C++` compiler after downloading, so you need to install `Visual Studio` and configure the `C++` compilation environment. If `C++` environment have been installed and configured, please ignore; If not, please see [this Article](https://blog.csdn.net/qq_42951560/article/details/115949166).
 ### 4.3.3. Example
 [hog_anime_face_detect.py](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/example/hog_anime_face_detect.py)
 ```python
