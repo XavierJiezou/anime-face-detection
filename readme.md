@@ -124,6 +124,7 @@ if __name__ == '__main__':
 |Total| Missing | Error | Time|
 |:--:|:--:|:--:|:--:|
 | 10 | 3 | 0 | 2.42s |
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422200142818.jpg#pic_center)
 
 ## 4.4. Anime Face Detection Based on SSD
@@ -138,6 +139,7 @@ if __name__ == '__main__':
 |Total| Missing | Error | Time|
 |:--:|:--:|:--:|:--:|
 | 13 | 0 | 0 | 0.72s |
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042221243255.jpg#pic_center)
 # 5. Other Experiment
 ## 5.1. Test Sample
@@ -164,11 +166,15 @@ if __name__ == '__main__':
 # 6. Analysis 
 The anime face detection algorithm based on **MLP** is too slow to meet the requirements of practical applications. The other three algorithms behave differently on different sample image.
 # 7. Future Work
-> Anime Face Detection Based on Faster-RCNN: https://github.com/qhgz2013/anime-face-detector/
-> Anime Face Detection Based on CNN: [https://github.com/ShiqiYu/libfacedetection](https://github.com/ShiqiYu/libfacedetection)
-> Other Related Work: [https://github.com/search?p=1&q=anime+face+detection&type=Repositories](https://github.com/search?p=1&q=anime%20face%20detection&type=Repositories)
+- Anime Face Detection Based on Faster-RCNN: https://github.com/qhgz2013/anime-face-detector/
+- Anime Face Detection Based on CNN: [https://github.com/ShiqiYu/libfacedetection](https://github.com/ShiqiYu/
+libfacedetection)
+- Other Related Work: [https://github.com/search?p=1&q=anime+face+detection&type=Repositories](https://github.com/search?p=1&q=anime%20face%20detection&type=Repositories)
 # 8. Cite
 > [https://github.com/nagadomi/lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface)
+
 > [https://github.com/nya3jp/python-animeface](https://github.com/nya3jp/python-animeface)
+
 > [https://github.com/marron-akanishi/AFD](https://github.com/marron-akanishi/AFD)
+
 > [https://github.com/WynMew/AnimeFaceBoxes](https://github.com/WynMew/AnimeFaceBoxes)
