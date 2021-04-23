@@ -177,3 +177,5 @@ The anime face detection algorithm based on **MLP** is too slow to meet the requ
 > [https://github.com/marron-akanishi/AFD](https://github.com/marron-akanishi/AFD)
 
 > [https://github.com/WynMew/AnimeFaceBoxes](https://github.com/WynMew/AnimeFaceBoxes)
+
+> [https://github.com/hiromu/AnimeFace](https://github.com/hiromu/AnimeFace)
