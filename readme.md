@@ -167,8 +167,7 @@ if __name__ == '__main__':
 The anime face detection algorithm based on **MLP** is too slow to meet the requirements of practical applications. The other three algorithms behave differently on different sample image.
 # 7. Future Work
 - Anime Face Detection Based on Faster-RCNN: https://github.com/qhgz2013/anime-face-detector/
-- Anime Face Detection Based on CNN: [https://github.com/ShiqiYu/libfacedetection](https://github.com/ShiqiYu/
-libfacedetection)
+- Anime Face Detection Based on CNN: [https://github.com/ShiqiYu/libfacedetection](https://github.com/ShiqiYu/libfacedetection)
 - Other Related Work: [https://github.com/search?p=1&q=anime+face+detection&type=Repositories](https://github.com/search?p=1&q=anime%20face%20detection&type=Repositories)
 # 8. Cite
 > [https://github.com/nagadomi/lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface)
