@@ -1,7 +1,3 @@
-'''Modules
-pip install animeface
-pip install opencv-python
-'''
 import cv2
 import animeface
 from PIL import Image

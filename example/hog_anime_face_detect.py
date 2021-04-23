@@ -1,7 +1,3 @@
-'''Module
-pip install opencv-python
-pip install dlib
-'''
 import cv2
 import dlib
 import sys
