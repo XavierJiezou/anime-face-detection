@@ -16,6 +16,7 @@ For video detection:
 python ./video_detect.py ./test/1.mp4 lbp
 ```
 Param one: path of images/videos
+
 Param two: method to be selected
 # Test Sample
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042219445425.jpg#pic_center)
