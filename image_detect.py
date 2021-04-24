@@ -10,8 +10,8 @@ import cv2
 def image_detect(image_path, method):
     if method == 'lbp':
         img = lbp_anime_face_detect(image_path, './model/lbp_anime_face_detect.xml')
-    # elif method=='mlp':
-    #     img = mlp_anime_face_detect(image_path)
+    elif method=='mlp':
+        img = mlp_anime_face_detect(image_path)
     elif method == 'hog':
         img = hog_anime_face_detect(image_path, './model/hog_anime_face_detect.svm')
     elif method == 'ssd':
