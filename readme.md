@@ -1,18 +1,33 @@
-# 1. Introduction
+# Introduction
 This repository is the summary of anime face detection methods based on Python.
-# 2. Test Sample
+# Install
+There are four methods for anime face detection: `lbp`, `mlp`, `hog` and `ssd`.
+- `lbp`: `pip install opencv-python`
+- `mlp`: `pip install pillow opencv-python animeface`
+- `hog`: `pip install opencv-python dlib`
+- `ssd`: `pip install opencv-python numpy torch`
+# Usage
+For image detection:
+```bash
+python ./image_detect.py ./test/1.jpg lbp
+```
+For video detection:
+```bash
+python ./video_detect.py ./test/1.mp4 lbp
+```
+# Test Sample
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042219445425.jpg#pic_center)
-# 3. Test Device
+# Test Device
 - CPU：`12  Intel(R) Xeon(R) CPU E5-2603 v4 @ 1.70GHz`
 - GPU：`8 NVIDIA GeForce GTX 1080 Ti`
-# 4. Anime Face Detection
-## 4.1. Anime Face Detection Based on LBP
-### 4.1.1. Repository
+# Anime Face Detection
+## Anime Face Detection Based on LBP
+### Repository
 > [https://github.com/nagadomi/lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface)
-### 4.1.2. Environment
+### Environment
 - Module: `pip install opencv-python`
 - Model: [lbp_anime_face_detect.xml](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/model/lbp_anime_face_detect.xml)
-### 4.1.3. Example
+### Example
 [lbp_anime_face_detect.py](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/example/lbp_anime_face_detect.py)
 ```python
 import cv2
@@ -33,17 +48,17 @@ def lbp_anime_face_detect(file_name):
 if __name__ == '__main__':
     lbp_anime_face_detect(sys.argv[1])
 ```
-### 4.1.4. Result
+### Result
 |Total| Missing  | Error | Time|
 |:--:|:--:|:--:|:--:|
 | 13 | 1 | 1 | 1.20s |
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422194611765.jpg#pic_center)
 
-## 4.2. Anime Face Detection Based on MLP
-### 4.2.1. Repository
+## Anime Face Detection Based on MLP
+### Repository
 > [https://github.com/nya3jp/python-animeface](https://github.com/nya3jp/python-animeface)
-### 4.2.2. Environment
+### Environment
 - System Requirements: Only for `Linux` system
 - Module: `pip install pillow opencv-python animeface`
 
@@ -52,7 +67,7 @@ Note: If `pip install animeface` reports an error, please download the compiled 
 ```bash
 pip install animeface-1.1.0-cp37-cp37m-manylinux1_x86_64.whl
 ```
-### 4.2.3. Example
+### Example
 [mlp_anime_face_detect.py](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/example/mlp_anime_face_detect.py)
 ```python
 import cv2
@@ -79,22 +94,22 @@ def mlp_anime_face_detect(file_name):
 if __name__ == '__main__':
     mlp_anime_face_detect(sys.argv[1])
 ```
-### 4.2.4. Result
+### Result
 |Total| Missing | Error | Time|
 |:--:|:--:|:--:|:--:|
 | 17 | 0 | 4 | 28.28s |
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422195835588.jpg#pic_center)
 
-## 4.3. Anime Face Detection Based on HOG
-### 4.3.1. Repository
+## Anime Face Detection Based on HOG
+### Repository
 > [https://github.com/marron-akanishi/AFD](https://github.com/marron-akanishi/AFD)
-### 4.3.2. Environment
+### Environment
 - Module: `pip install opencv-python dlib`
 - Model: [hog_anime_face_detect.svm](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/model/hog_anime_face_detect.svm)
 ---
 Note：The `dlib` library needs to be compiled with the `C++` compiler after downloading, so you need to install `Visual Studio` and configure the `C++` compilation environment. If `C++` environment have been installed and configured, please ignore; If not, please see [this Article](https://blog.csdn.net/qq_42951560/article/details/115949166).
-### 4.3.3. Example
+### Example
 [hog_anime_face_detect.py](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/example/hog_anime_face_detect.py)
 ```python
 import cv2
@@ -120,29 +135,29 @@ def hog_anime_face_detect(file_name):
 if __name__ == '__main__':
     hog_anime_face_detect(sys.argv[1])
 ```
-### 4.3.4. Result
+### Result
 |Total| Missing | Error | Time|
 |:--:|:--:|:--:|:--:|
 | 10 | 3 | 0 | 2.42s |
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422200142818.jpg#pic_center)
 
-## 4.4. Anime Face Detection Based on SSD
-### 4.4.1. Repository
+## Anime Face Detection Based on SSD
+### Repository
 > [https://github.com/WynMew/AnimeFaceBoxes](https://github.com/WynMew/AnimeFaceBoxes)
-### 4.4.2. Environment
+### Environment
 - Module: `pip install opencv-python numpy torch`
 - Model: [ssd_anime_face_detect.pth](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/model/ssd_anime_face_detect.pth)
-### 4.4.3. Example
+### Example
 [ssd_anime_face_detect.py](https://cdn.jsdelivr.net/gh/XavierJiezou/anime-face-detection@master/example/ssd_anime_face_detect.py) (The code is too long to display, Please download and view)
-### 4.4.4. Result
+### Result
 |Total| Missing | Error | Time|
 |:--:|:--:|:--:|:--:|
 | 13 | 0 | 0 | 0.72s |
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042221243255.jpg#pic_center)
-# 5. Other Experiment
-## 5.1. Test Sample
+# Other Experiment
+## Test Sample
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422221239814.jpg#pic_center)
 <center><font color=#CCCCCC>【Painter】ゆりりん【Pixiv ID】88049646 </font></center>
 
@@ -156,20 +171,20 @@ if __name__ == '__main__':
 <center><font color=#CCCCCC>【Painter】D.【Pixiv ID】68074033 </font></center>
 
 
-## 5.2. Test Result
+## Test Result
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042300100255.jpg#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210423001001987.jpg#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042300100136.jpg#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/202104230010028.jpg#pic_center)
 
 
-# 6. Analysis 
+# Analysis 
 The anime face detection algorithm based on **MLP** is too slow to meet the requirements of practical applications. The other three algorithms behave differently on different sample image.
-# 7. Future Work
+# Future Work
 - Anime Face Detection Based on Faster-RCNN: https://github.com/qhgz2013/anime-face-detector/
 - Anime Face Detection Based on CNN: [https://github.com/ShiqiYu/libfacedetection](https://github.com/ShiqiYu/libfacedetection)
 - Other Related Work: [https://github.com/search?p=1&q=anime+face+detection&type=Repositories](https://github.com/search?p=1&q=anime%20face%20detection&type=Repositories)
-# 8. Cite
+# Cite
 > [https://github.com/nagadomi/lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface)
 
 > [https://github.com/nya3jp/python-animeface](https://github.com/nya3jp/python-animeface)
