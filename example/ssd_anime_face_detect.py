@@ -325,7 +325,7 @@ def load_model(model, pretrained_path, load_to_cpu):
     return model
 
 
-def ssd_anime_face_detect(file_name):
+def ssd_anime_face_detect(image_path, model_path):
     cfg = {
         'name': 'FaceBoxes',
         #'min_dim': 1024,
@@ -338,11 +338,10 @@ def ssd_anime_face_detect(file_name):
         'loc_weight': 2.0,
         'gpu_train': True
     }
-
-    weightfile = '../model/ssd_anime_face_detect.pth'
-
+    
     cpu = True
-    confidenceTh = 0.05
+    # confidenceTh = 0.05
+    confidenceTh = 0.1
     nmsTh = 0.3
     keepTopK = 750
     top_k = 5000
@@ -351,15 +350,14 @@ def ssd_anime_face_detect(file_name):
     # net and model
     # initialize detector
     net = FaceBoxes(phase='test', size=None, num_classes=2)
-    net = load_model(net, weightfile, cpu)
+    net = load_model(net, model_path, cpu)
     net.eval()
     #print('Finished loading model!')
     #print(net)
     device = torch.device("cpu" if cpu else "cuda")
     net = net.to(device)
 
-    image_path = file_name
-    imgOrig = cv2.imread(image_path, cv2.IMREAD_COLOR)
+    imgOrig = cv2.imread(image_path, cv2.IMREAD_COLOR) if type(image_path)==str else image_path
     img = np.float32(imgOrig)
     im_height, im_width, _ = img.shape
     scale = torch.Tensor(
@@ -408,10 +406,10 @@ def ssd_anime_face_detect(file_name):
         ymin += 0.2 * (ymax - ymin + 1)
         score = dets[k, 4]
         # print('{:s} {:.3f} {:.1f} {:.1f} {:.1f} {:.1f}\n'.format(image_path, score, xmin, ymin, xmax, ymax))
-        cv2.rectangle(imgOrig, (int(xmin), int(ymin)),
-                      (int(xmax), int(ymax)), (255, 0, 255), 5)
-    cv2.imwrite(f'../result/ssd_anime_face_detect_{image_path[-5]}.jpg', imgOrig)
+        cv2.rectangle(imgOrig, (int(xmin), int(ymin)), (int(xmax), int(ymax)), (255, 0, 255), 5)
+    # cv2.imwrite(f'../result/ssd_anime_face_detect_{image_path[-5]}.jpg', imgOrig)
+    return imgOrig
 
 
 if __name__ =='__main__':
-    ssd_anime_face_detect(sys.argv[1])
+    ssd_anime_face_detect(sys.argv[1], '../model/ssd_anime_face_detect.pth')
